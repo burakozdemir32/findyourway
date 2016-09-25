@@ -1,0 +1,232 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:200,300,400);
+*, *:before, *:after {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0}
+
+body{background:#C5DDEB;line-height:1.5;font-size:16px;color: #444753;font-family: 'Exo', sans-serif; margin:0; padding:0;}
+a{text-decoration:none;color:#fafafa}
+#header{background:#444753;width:100%;position:relative}
+#header:after{content:"";clear:both;display:block}
+.logo{float:left;padding:26px 0 26px;}
+.logo a{font-size:28px;display:block;padding:0 0 0 20px; color:#F2F5F8;}
+.logo span{color:#191919;}
+nav{float:right; }
+nav>ul{float:left;position:relative;}
+nav li{list-style:none;float:left;}
+
+nav li a{float:left;padding:35px; color:#F2F5F8; transition:800ms ease all;
+  outline:none;}
+nav li a:hover{background:#F2F5F8; color:#444753; transition:800ms ease all;
+  outline:none;}
+nav li ul{display:none}
+nav li:hover ul{display:inline}
+nav li li{float:none}
+
+#menu-icon{position:absolute;right:0;top:50%;margin-top:-12px;margin-right:30px;display:none}
+#menu-icon span{border:2px solid #F2F5F8;width:30px;margin-bottom:5px;display:block;-webkit-transition:all .2s;transition:all .1s}
+@media only screen and (max-width: 1170px) {
+  nav >ul>li >a{padding:35px 15px}
+}
+@media only screen and (min-width: 960px) {
+  nav{display:block!important}
+}
+
+@media only screen and (max-width: 959px) {
+  #description p {display: none;}
+  nav{display:none;width:100%;clear:both;float:none;max-height:400px;}
+  #menu-icon{display:inline;top:45px;cursor:pointer}
+  #menu-icon.active .first{transform:rotate(45deg);-webkit-transform:rotate(45deg);margin-top:10px}
+  #menu-icon.active .second{transform:rotate(135deg);-webkit-transform:rotate(135deg);position:relative;top:-9px;}
+  #menu-icon.active .third{display:none}
+  nav{padding:10px}
+  nav ul{float:none}
+  nav li{float:none}
+  nav ul li a{float:none;padding:8px;display:block}
+  #header nav a{color:#F2F5F8;padding:8px}
+  #header nav a:hover{background:#F2F5F8;color:#444753;border-radius:3px}
+}
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  color: #555;
+  color: #444753;
+  background: #ebedee;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  body {
+    padding: 30px;
+  }
+}
+@media (max-width: 420px) {
+  body {
+    padding: 10px;
+  }
+}
+
+h1, h2 {
+  margin-top: 10px;
+}
+
+h1 {
+  line-height: 30px;
+  color: #444753;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    height: 100%;
+  }
+}
+
+.container {
+  opacity: 0;
+  -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
+          transition: transform 1s ease, opacity 1s ease;
+  -webkit-transform: translateY(-40px);
+      -ms-transform: translateY(-40px);
+          transform: translateY(-40px);
+  position: relative;
+  box-sizing: border-box;
+  width: 80%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 700px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+.container.fadeIn {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    min-width: 350px;
+  }
+}
+.container > div {
+  box-sizing: border-box;
+  padding: 50px 30px;
+}
+@media (max-width: 420px) {
+  .container > div {
+    padding: 40px 30px !important;
+  }
+}
+
+.profile {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5) url(http://clipartzebra.com/images/1/route/route-05.jpg) no-repeat top;
+  height: 100%;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.profile .meta {
+  position: relative;
+  z-index: 1;
+}
+.profile .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+.avatar {
+  width:30x;
+  height:30px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.profile h2 {
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+.profile .position {
+  font-size: 13px;
+}
+.profile .social {
+  padding-top: 15px;
+}
+.profile .social i {
+  margin: 0 5px;
+}
+.profile a {
+  color: #fff;
+}
+
+.portfolio {
+  margin-left: 200px;
+  padding: 50px !important;
+}
+
+@media (max-width: 670px) {
+  .profile {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+  }
+  .profile h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  .avatar {
+    width: 80px !important;
+  }
+
+  .portfolio {
+    margin: 0;
+  }
+}
+.footer {
+  color: #cfd4d7;
+  padding: 20px 0;
+}
+.footer .fa {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.label {
+  display: normal;
+  color: #f9f9fa;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background: #dadee0;
+}

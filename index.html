@@ -1,0 +1,65 @@
+<html lang='en'>
+  <head>
+    <title>Yolunu Bul Geolocation Uygulaması</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content='"Yolunu Bul" uygulaması herhangi iki nokta arasındaki alternatif rotaları tespit eden uygulamadır.' name='description' />
+    <meta content='Yolunu Bul Geolocation' name='author' />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+	<body>
+		<div id="header">
+		<div class="logo">
+			<a href="#"><img src="https://whatimg.com/i/UrCmvf.jpg" class="avatar"/> Yolunu Bul!</a>
+		</div>  
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Harita</a>
+				</li>
+				<li>
+					<a href="about.html">Hakkında</a>
+				</li>
+				
+			</ul>
+		</nav>
+		</div>
+		
+		<div id="main">
+		<div id="section">
+			<div id="description">
+				<div id="box"><h3><img src="https://whatimg.com/i/UrCmvf.jpg" class="avatar"/><br />Yolunu Bul!</h3></div>
+				<p>"Yolunu Bul" uygulaması herhangi iki nokta arasındaki alternatif rotaları tespit eden uygulamadır. Uygulama seçilen iki nokta arasındaki en uygun güzergahları belirlemekte ve bu güzergahlara ilişkin harita oluşturmaktadır.</p>
+			</div>
+			<form class="form">
+			<h4>Konumum</h4>
+			<input id="firstBox" type="search" placeholder="Başlangıç Noktası Seçin...">
+			<h4>Varış Noktası</h4>
+			<input id="secondBox" type="search" placeholder="Varış Noktası Seçin...">
+			</form>
+			<div id="buttonHolder">
+			<button id="drawRoute">Bul</button>
+			<button id="clearRoute">Temizle</button>
+			</div>
+			<div id="control_panel" style="overflow:scroll;float:left;text-align:left;position:absolute;height:58%; width:100%;display:none;">
+		<div id="directions_panel"></div>
+		</div>
+		</div>
+		
+		<div id='map'></div>
+		</div>
+		
+		 
+
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/googlemaps.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBatgXwBlu3v4lx5d1oXk07qxynvZnddls&signed_in=true&libraries=places&callback=initMap"
+        async defer></script>
+	
+ </body>
+</html>
